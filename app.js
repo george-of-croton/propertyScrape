@@ -42,7 +42,9 @@ server.route({
 	method: 'GET',
 	path: '/scrape',
 	handler: function(request, reply) {
-		scrape(1, function(err, data) {
+		var postcode = request.query.postcode
+		scrape(postcode, function(data) {
+			console.log(data)
 			reply(JSON.stringify({
 				"data": data
 			}))
