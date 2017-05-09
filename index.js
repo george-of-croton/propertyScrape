@@ -4,7 +4,7 @@ const request = require('request')
 
 
 
-const apikey = '84b5c8e378be4515bbe87af6714b7c5b'
+const apikey = '<apikey>'
 
 
 //Returns formatted UTC date stamp
