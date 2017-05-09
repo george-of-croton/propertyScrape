@@ -49,7 +49,7 @@ function getSignature(username, secretKey) {
 module.exports = function scrape(postcode, cb) {
 	const baseurl = 'https://members.propertydata.com.au/API/propertydataapi.svc/GetPropertyRecords?apikey='
 	const endurl = '&numberOfRecords=100&postcode='+ postcode +'&state=VIC&searchSurroundingArea=true&surroundingAreaRadius=10000&saleType=1,3,4,15,16,17,18'
-	request.get(baseurl + apikey + '&sig=' + getSignature('101601', 'a40252b6bc8a40feccb612cb9eff9ef9') + endurl, function(err, response, body) {
+	request.get(baseurl + apikey + '&sig=' + getSignature('<username>', '<secretkey>') + endurl, function(err, response, body) {
 	if (err) {
 		console.log(err)
 
